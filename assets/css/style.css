@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -15,10 +16,12 @@ header {
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
   margin: 0 15px;
 }
 
@@ -30,7 +33,7 @@ nav ul li a {
 
 .intro {
   text-align: center;
-  padding: 50px;
+  padding: 50px 20px;
   background-color: #e4e4e4;
 }
 
@@ -58,17 +61,15 @@ footer {
   width: 100%;
   bottom: 0;
 }
-/* Other CSS rules... */
 
 .logo img {
-  max-width: 150px; /* Adjust this value based on the desired logo size */
-  max-height: 50px; /* Adjust this value to control the height */
+  max-width: 150px;
+  max-height: 50px;
   width: auto;
   height: auto;
 }
 
-/* Other CSS rules... */
-
+/* Button Styles */
 button {
   background-color: #333;
   color: white;
@@ -79,4 +80,56 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 0;
+  }
+
+  nav ul {
+    text-align: left;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .intro {
+    padding: 40px 10px;
+  }
+
+  .intro h1 {
+    font-size: 2.5em;
+  }
+
+  .intro p {
+    font-size: 1em;
+  }
+
+  footer {
+    position: static;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 2em;
+  }
+
+  .intro p {
+    font-size: 0.9em;
+  }
+
+  .logo img {
+    max-width: 120px;
+    max-height: 40px;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
 }
